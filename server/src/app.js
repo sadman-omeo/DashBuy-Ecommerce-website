@@ -14,6 +14,7 @@ const rateLimiter = rateLimit({
 });
 
 //app.use(xssClean());
+app.use(rateLimiter);
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -48,8 +49,5 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(3001, ()=>{
-    console.log('server is perfectly running at http://localhost:3001')
-});
-
+ 
 module.exports = app;
