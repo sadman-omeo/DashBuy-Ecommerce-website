@@ -10,23 +10,7 @@ app.get("/test", (req, res) => {
     });
 });
 
-app.post("/test", (req, res) => {
-    res.status(200).send({
-        message: "post: API testing is working fine!!!"
-    });
-});
 
-app.put("/test", (req, res) => {
-    res.status(200).send({
-        message: "put: API testing is working fine!!!"
-    });
-});
-
-app.delete("/test", (req, res) => {
-    res.status(200).send({
-        message: "delete: API testing is working fine!!!"
-    });
-});
 
 app.listen(3001, ()=>{
     console.log('server is perfectly running at http://localhost:3001')
